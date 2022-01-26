@@ -1,0 +1,146 @@
+:root{
+    --primary-color:#17171e;
+    --secondary-color:#9186d4;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+.hero>.section{
+width: 100%;
+margin-top: 4%;
+padding: 2%;
+}
+.section__header{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        padding: 1%;
+        color: var(--primary-color);
+}
+.section__para{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   width: 50%;
+   padding: 1%;
+   color: var(--primary-color);
+}
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  margin: auto;
+ background-color:	var(--secondary-color); 
+  width: 100%;
+  left:0;
+  top:0;
+  padding: .8%;
+}
+
+.navbar li.logo,
+.navbar li.navbar_items {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.navbar li a {
+     font-family: 'Montserrat', sans-serif;
+  font-size: 1.05em;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.navbar li.navbar_items a:hover {
+  border-bottom-style: solid;
+  border-bottom-color: white;
+  /*   padding-bottom: 5px; */
+}
+
+.navbar li.icon {
+  display: none;
+}
+
+.div_navbar_items {
+  float: right;
+  padding-right:1%;
+}
+
+.intro{
+  position: relative;
+  top: 100px;
+  text-align:center;
+}
+
+p {
+  color:white;
+  font-size: 20px;
+     font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width:875px) {
+  .navbar li.navbar_items {
+    display: none;
+  }
+  .navbar li.icon {
+    float: right;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 19px;
+  }
+}
+
+@media screen and (max-width:875px) {
+  .navbar.responsive {
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(137, 207, 216);
+    transition: background-color .6s;
+  }
+  
+  .navbar.responsive li.logo {
+    floatL: left;
+    display: block;
+  }
+  .navbar.responsive .div_navbar_items {
+    float: none;
+    padding-right:0;
+  }
+  
+  .navbar.responsive li.navbar_items {
+    display: block;
+    padding: 50px;
+    font-size: 25px;
+  }
+  .navbar.responsive li.navbar_items a {
+    display: block;
+    text-align: center;
+  }
+  
+  .navbar.responsive li.navbar_items a:hover{
+    color:#17171e;
+    border-bottom-color: transparent;
+    
+  }
+  
+
+  
+}
